@@ -1,0 +1,9 @@
+.heading {
+    font-family: "heading-font";
+    color: white;
+    font-size: 72px;
+}
+@font-face {
+    font-family: 'heading-font';
+    src: url("../fonts/Roboto-Light.ttf");
+}

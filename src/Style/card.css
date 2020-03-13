@@ -1,0 +1,11 @@
+.card{
+    padding: 10px;
+    width: 250px;
+    height: 400px;
+    background-color: white;
+}
+.login-card {
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 125px);
+}
