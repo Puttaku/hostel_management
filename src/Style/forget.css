@@ -1,0 +1,15 @@
+.forgetPage{
+    width: 100%;
+    height: 100%;
+    background: url("../Assets/Photo/forget_bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -moz-background-size:cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: multiply;
+}
+.forgetPageContainer{
+    text-align: left;
+    padding-left: 30px;
+}
