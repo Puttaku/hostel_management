@@ -1,4 +1,4 @@
-body {
+.loginPage {
     width: 100%;
     height: 100%;
     background-image: url("../Assets/Photo/home_bg.jpg");
@@ -6,4 +6,12 @@ body {
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.login-heading{
+    margin-block-start: 0.5em;
+    margin-block-end: 0;
+}
+.login-sub-heading{
+    margin-block-start: 0.3em;
+    margin-block-end: 0;
 }

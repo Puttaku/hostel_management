@@ -5,7 +5,7 @@ import login from "./Component/login"
 function App() {
   return (
     <div className="App">
-      <Route path="/login" component={login}/>
+      <Route exact path="/login" component={login}/>
     </div>
   );
 }
