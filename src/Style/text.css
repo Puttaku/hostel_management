@@ -18,8 +18,20 @@
     color: white;
     font-size: 13px;
 }
+.bigFont{
+    font-size: 36px;
+}
+.nomargin{
+    margin: 0;
+}
+.marginRight{
+    margin-right: 10px;
+}
 .greyText{
-    color: #888888;
+    color: #bbbbbb;
+}
+.blueText{
+    color:#0085FF;
 }
 .leftText{
     text-align: left;
