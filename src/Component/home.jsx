@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import '../Style/home.css'
 export default class home extends Component {
     componentDidMount(){
         document.body.className="homePage";

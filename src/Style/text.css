@@ -21,8 +21,15 @@
 .bigFont{
     font-size: 36px;
 }
+.font28{
+    font-size: 28px;
+}
 .nomargin{
     margin: 0;
+}
+.nomarginblock{
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
 }
 .marginRight{
     margin-right: 10px;
