@@ -28,6 +28,9 @@
   margin-block-start: 10px;
   margin-block-end: 15px;
 }
+.leftMargin{
+  margin-left: 10px;
+}
 .flexOn{
   display: flex;
 }

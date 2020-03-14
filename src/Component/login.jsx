@@ -2,7 +2,15 @@ import React, { Component } from 'react'
 import '../Style/Login.css'
 import '../Style/card.css'
 import '../Style/text.css'
-export default class login extends Component {
+import {withRouter} from "react-router-dom"
+class login extends Component {
+    constructor(props){
+        super(props);
+        this.toHome = this.toHome.bind(this);
+    }
+    toHome(){
+        this.props.history.push("/home");
+    }
     componentDidMount(){
         document.body.className="loginPage";
     }
@@ -28,7 +36,7 @@ export default class login extends Component {
                                 <input type="checkbox" className="checkBox"/>
                                 <p className="heading2 greyText leftText thaiFont" style={{marginLeft : "10px"}}>จดจำผู้ใช้</p>
                             </div>
-                            <button className="Button submitLoginButton thaiFont">ลงชื่อเข้าใช้</button>
+                            <button className="Button submitLoginButton thaiFont" onClick={()=>{this.toHome()}}>ลงชื่อเข้าใช้</button>
                         </div>
                         <div className="linkBox">
                             <a href="/register" className="content greyText leftText thaiFont">ยังไม่มีบัญชี ? ลงทะเบียนที่นี่</a>
@@ -40,3 +48,4 @@ export default class login extends Component {
         )
     }
 }
+export default withRouter(login)
