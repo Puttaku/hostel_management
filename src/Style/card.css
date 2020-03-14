@@ -10,3 +10,14 @@
     top: calc(50% - 150px);
     left: calc(50% - 125px);
 }
+.hotel-list-card{
+    width: 260px;
+    height: 150px;
+    margin: 5px;
+    background-color: #EDEDED;
+}
+@media only screen and (min-width : 1366px){
+    .hotel-list-card{
+        width: 250px;
+    }
+}
