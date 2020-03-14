@@ -23,6 +23,7 @@
 .submitLoginButton{
     color: white;
     background-color: #0085FF;
+    cursor: pointer;
 }
 .linkBox{
     margin-top: 10px;
