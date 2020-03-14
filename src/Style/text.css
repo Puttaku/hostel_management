@@ -27,7 +27,13 @@
 .marginRight{
     margin-right: 10px;
 }
+.blackText{
+    color: black;
+}
 .greyText{
+    color: #888888;
+}
+.greyText2{
     color: #bbbbbb;
 }
 .blueText{
@@ -37,6 +43,12 @@
     text-align: left;
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
+}
+.font-thick{
+    font-family: "heading-font-thick";
+}
+.font-regular{
+    font-family: 'heading-font-Regular';
 }
 .thaiFont{
     font-family: "thaiFont";
@@ -51,6 +63,10 @@
 @font-face {
     font-family: 'heading-font-thick';
     src: url("../fonts/Roboto/Roboto-Black.ttf");
+}
+@font-face {
+    font-family: 'heading-font-Regular';
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 @font-face {
     font-family: 'thaiFont';

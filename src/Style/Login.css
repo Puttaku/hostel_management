@@ -9,6 +9,9 @@
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: multiply;
 }
+.loginBoxheader{
+    text-align: center;
+}
 .login-heading{
     margin-block-start: 0.5em;
     margin-block-end: 0;
@@ -27,4 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.headingContainer{
+    text-align: center;
 }
