@@ -7,4 +7,39 @@
     overflow-x: auto;
     flex-wrap: wrap;
     margin-left: 15px;
+    margin-top: 50px;
+}
+.hotelThumbnail{
+    width: 100%;
+    height: 110px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: url("../Assets/Photo/home_bg.jpg");
+    background-size: cover;
+}
+.hotelDetail{
+    display:flex;
+    width: 92%;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+.detailLeft{
+    float:left;
+}
+.detailRight{
+    text-align: right !important;
+    float:right;
+}
+@media only screen and (min-width : 1367px){
+    .hotelThumbnail{
+        height: 150px;
+    }
+    .hotelDetail{
+        display:flex;
+        width: 92%;
+        justify-content: space-between;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
 }
