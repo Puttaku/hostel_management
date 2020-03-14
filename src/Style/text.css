@@ -28,7 +28,10 @@
     margin-right: 10px;
 }
 .greyText{
-    color: #888888;
+    color: #bbbbbb;
+}
+.blueText{
+    color:#0085FF;
 }
 .leftText{
     text-align: left;

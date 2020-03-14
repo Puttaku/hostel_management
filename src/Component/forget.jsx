@@ -13,6 +13,12 @@ export default class forget extends Component {
                     <p className="heading2 login-heading thaiFont-thick bigFont nomargin">ลืมรหัสผ่าน</p>
                     <p className="heading2 leftText thaiFont marginRight">ไม่ต้องห่วง! เพียงคุณกรอกอีเมลล์ที่ใช้สมัครเรา แล้วเราจะส่ง link เปลี่ยนรหัสผ่านให้คุณ</p>
                 </div>
+                <div className="forgetTextbox">
+                    <p className="heading2 leftText thaiFont marginRight greyText">อีเมลล์</p>
+                    <input className="forgetEmail inputBox"/>
+                    <button className="Button forgetButton thaiFont">ตกลง</button>
+                </div>
+                <a href="/login" className="content blueText leftText thaiFont">กลับสู่หน้าลงชื่อเข้าใช้</a>
             </div>
         )
     }

@@ -13,3 +13,19 @@
     text-align: left;
     padding-left: 30px;
 }
+.forgetEmail{
+    width: 30%;
+}
+.forgetTextbox{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.forgetButton{
+    width: 80px;
+    background-color: #0085FF;
+    color: white;
+    margin-left: 20px;
+}
+.forgetEmail{
+    height: 31px;
+}
