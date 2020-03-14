@@ -34,3 +34,6 @@
 .flexOn{
   display: flex;
 }
+.noPadding{
+  padding: 0 !important;
+}

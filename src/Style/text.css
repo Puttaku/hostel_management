@@ -18,6 +18,13 @@
     color: white;
     font-size: 13px;
 }
+.listFont{
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 175px;
+    text-overflow: ellipsis;
+}
 .bigFont{
     font-size: 36px;
 }
@@ -26,6 +33,9 @@
 }
 .nomargin{
     margin: 0;
+}
+.rightAlign{
+    text-align: right !important;
 }
 .nomarginblock{
     margin-block-start: 0 !important;
@@ -45,6 +55,9 @@
 }
 .blueText{
     color:#0085FF;
+}
+.greenText{
+    color: lime;
 }
 .leftText{
     text-align: left;
@@ -82,4 +95,10 @@
 @font-face {
     font-family: 'thaiFont-thick';
     src: url("../fonts/Kanit/Kanit-Regular.ttf");
+}
+@media only screen and (min-width : 1367px){
+    .listFont{
+        font-size: 16px;
+        max-width: 260px;
+    }
 }
