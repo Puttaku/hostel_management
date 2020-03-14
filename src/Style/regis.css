@@ -1,0 +1,44 @@
+.regisContainer{
+    display: flex;
+}
+.leftThumbnailRegis{
+    visibility: hidden;
+}
+.rightFormRegis{
+    position: absolute;
+    width: 95%;
+    left: 10px;
+}
+.regisHeading{
+    margin-block-end: 50px;
+}
+.nameBox{
+    display: flex;
+}
+.passwordBoxRegis{
+    margin-left: 20px;
+}
+.usernameBoxRegis , .passwordBoxRegis{
+    width: 50%;
+}
+.submitRegisButton{
+    width: 40%;
+    background-color: #0085FF;
+    color: white;
+}
+@media only screen and (min-width : 530px){
+    .leftThumbnailRegis{
+        visibility: visible;
+        position: fixed;
+        width: 35%;
+        max-width: 476px;
+        height: 720px;
+        left: 0px;
+        top: 0px;
+        background: url("../Assets/Photo/regis_bg.jpg");
+    }
+    .rightFormRegis{
+        left: calc(35% + 10px);
+        width: 60%;
+    }
+}

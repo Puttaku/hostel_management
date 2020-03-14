@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 .inputBox{
   width: calc(100% - 5px);
@@ -20,4 +20,14 @@
   margin-block-end: 10px;
   text-align: left;
   background-color: #DDDDDD;
+}
+.fullWidth{
+  width: 100%;
+}
+.topdownMargin{
+  margin-block-start: 10px;
+  margin-block-end: 15px;
+}
+.flexOn{
+  display: flex;
 }

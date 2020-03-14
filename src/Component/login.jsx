@@ -31,7 +31,7 @@ export default class login extends Component {
                             <button className="Button submitLoginButton thaiFont">ลงชื่อเข้าใช้</button>
                         </div>
                         <div className="linkBox">
-                            <a href="/regis" className="content greyText leftText thaiFont">ยังไม่มีบัญชี ? ลงทะเบียนที่นี่</a>
+                            <a href="/register" className="content greyText leftText thaiFont">ยังไม่มีบัญชี ? ลงทะเบียนที่นี่</a>
                             <a href="/forget" className="content greyText leftText thaiFont">ลืมรหัสผ่าน?</a>
                         </div>
                     </div>
