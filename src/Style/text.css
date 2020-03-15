@@ -25,6 +25,9 @@
     max-width: 175px;
     text-overflow: ellipsis;
 }
+.priceText{
+    margin-block-start: 0 !important;
+}
 .bigFont{
     font-size: 36px;
 }
