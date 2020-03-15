@@ -1,9 +1,24 @@
 import React, { Component } from 'react'
 import '../Style/detail.css'
+import Bookingcard from "./object/bookingbox"
 export default class detail extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            booking : false
+        }
+        this.openBookingBox = this.openBookingBox.bind(this);
+    }
+    openBookingBox(){
+        console.log(this.state.booking)
+        this.setState ({
+            booking : this.state.booking === true ? false : true
+        })
+    }
     render() {
         return (
             <div className="detailContainer">
+                {this.state.booking? <Bookingcard click={()=>{this.openBookingBox()}}/> : ""}
                 <div className="detailHeaderContainer">
                     <div className="detailHeaderLeft">
                         <p className="heading2 login-heading thaiFont-thick bigFont leftMargin blackText">Hotel A</p>
@@ -25,7 +40,7 @@ export default class detail extends Component {
                 </div>
                 <div className="detailPriceContainer">
                     <p className="heading2 login-heading thaiFont-thick bigFont leftMargin blackText priceText">ราคา : 9500.- / คืน</p>
-                    <button className="Button submitLoginButton thaiFont priceButton heading2">จองเลย</button>
+                    <button className="Button submitLoginButton thaiFont priceButton heading2" onClick={()=>{this.openBookingBox()}}>จองเลย</button>
                 </div>
                 <div className="detailMainContainer">
                     <div>

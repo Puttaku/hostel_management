@@ -1,0 +1,24 @@
+.bgbl08{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+}
+.bookingForm{
+    width: 100%;
+}
+.bookConfirm{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.closeBookingBox{
+    position: absolute;
+    margin-left: 390px;
+    cursor: pointer;
+}
