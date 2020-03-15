@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import '../../Style/card.css'
 import '../../Style/App.css'
 export default class hotelbox extends Component {
+    
     render() {
         return (
-            <div className="card hotel-list-card noPadding">
+            <div className="card hotel-list-card noPadding" onClick={()=>{this.props.click();}}>
                 <div className="hotelThumbnail"/>
                 <div className="hotelDetail">
                     <div className="detailLeft">
