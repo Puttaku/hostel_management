@@ -27,6 +27,23 @@ export default class detail extends Component {
                     <p className="heading2 login-heading thaiFont-thick bigFont leftMargin blackText priceText">ราคา : 9500.- / คืน</p>
                     <button className="Button submitLoginButton thaiFont priceButton heading2">จองเลย</button>
                 </div>
+                <div className="detailMainContainer">
+                    <div>
+                        <p className="heading3 login-heading thaiFont-thick leftMargin blackText priceText">รายละเอียด</p>
+                        <div className="detailList">
+                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- อาหาร 3 มื้อ</p>
+                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- บริการสระว่ายน้ำ</p>
+                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- ห้องนอน 1 ห้อง 2 เตียง 1 ห้องน้ำ</p>
+                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- เครื่องทำน้ำอุ่น</p>
+                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- บาร์</p>
+                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- ซาวนาร์</p>
+                        </div>
+                    </div>
+                    <div className="detailLocation">
+                        <p className="heading3 login-heading thaiFont-thick leftMargin blackText priceText blockendMargin">ที่ตั้ง</p>
+                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">หมู่ที่ 5 บ้านตาลสุม. ตำบล : ตาลสุม. อำเภอ : ตาลสุม. จังหวัด : อุบลราชธานี. รหัสไปรษณีย์ : 34330.</p>
+                    </div>
+                </div>
             </div>
         )
     }

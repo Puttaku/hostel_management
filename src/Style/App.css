@@ -31,6 +31,12 @@
 .leftMargin{
   margin-left: 10px;
 }
+.bottomMargin{
+  margin-bottom: 10px;
+}
+.blockendMargin{
+  margin-block-end: 10px !important;
+}
 .flexOn{
   display: flex;
 }
