@@ -8,6 +8,7 @@ import redirect from "./Component/redirect"
 import regis from "./Component/regis"
 import home from "./Component/home"
 import Navbar from "./Component/navbar"
+import book from "./Component/book"
 import {withRouter} from "react-router-dom"
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <Route exact path="/forget" component={forget}/>
         <Route exact path="/register" component={regis}/>
         <Route exact path="/home" component={home}/>
+        <Route exact path="/booked" component={book}/>
       </div>
     )
   }

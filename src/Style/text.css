@@ -59,6 +59,9 @@
 .greenText{
     color: lime;
 }
+.redText{
+    color: red;
+}
 .leftText{
     text-align: left;
     margin-block-start: 0.5em;

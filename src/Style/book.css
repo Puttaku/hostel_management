@@ -1,0 +1,44 @@
+.bookedContainer{
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+.bookedTableContainer{
+    width: calc(100% - 60px);
+    margin: 20px;
+}
+.bookedTable{
+    width: 100%;
+}
+.heading-table{
+    width: calc(100%);
+    height: 60px;
+}
+.heading-table > th{
+    border-bottom: 2px solid rgb(190, 190, 190);
+}
+.content-table > td{
+    border-bottom: 2px solid rgb(190, 190, 190);
+}
+.heading-name{
+    width: 40%;
+}
+.heading-price{
+    width: 10%;
+}
+.heading-dob{
+    width: 22%;
+}
+.heading-dou{
+    width: 23%;
+}
+.content-table{
+    text-align: center;
+    height: 50px;
+}
+.content-table > .content-name{
+    text-align: left;
+}
+.content-delete{
+    cursor: pointer;
+    color: red;
+}
