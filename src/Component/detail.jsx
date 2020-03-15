@@ -26,7 +26,7 @@ export default class detail extends Component {
                     </div>
                     <div className="detailHeaderRight">
                         <p className="heading2 login-heading thaiFont-thick bigFont leftMargin greenText">ว่าง</p>
-                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText">อาหาร  3 มื้อ/สระว่ายน้ำ/2 เตียง</p>
+                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText">อาหาร 3 มื้อ/สระว่ายน้ำ/2 เตียง</p>
                     </div>
                 </div>
                 <div className="detailPicContainer">
