@@ -16,7 +16,7 @@ export default class navbar extends Component {
                 </div>
                 <div className="navigatorContainer">
                         <a href="/home" className="heading2 leftText thaiFont font28 leftMargin navmenuText">หน้าหลัก</a>
-                        <a href="/home" className="heading2 leftText thaiFont font28 leftMargin navmenuText">โรงแรมที่จอง</a>
+                        <a href="/booked" className="heading2 leftText thaiFont font28 leftMargin navmenuText">โรงแรมที่จอง</a>
                         <a href="/login" className="heading2 leftText thaiFont font28 leftMargin navmenuText">ออกจากระบบ</a>
                 </div>
             </div>
