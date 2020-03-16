@@ -3,16 +3,21 @@ import '../Style/Login.css'
 import '../Style/card.css'
 import '../Style/text.css'
 import {withRouter} from "react-router-dom"
+import {connect} from "react-redux"
+import {bindActionCreators} from "redux"
+import {userLogin} from "../Redux/Action/userAction"
 class login extends Component {
     constructor(props){
         super(props);
         this.toHome = this.toHome.bind(this);
     }
     toHome(){
-        this.props.history.push("/home");
+        console.log(this.username.value + " : " + this.password.value)
+        // this.props.history.push("/home");
     }
     componentDidMount(){
         document.body.className="loginPage";
+        console.log("Props : ",this.props)
     }
     render() {
         return (
@@ -29,9 +34,9 @@ class login extends Component {
                         </div>
                         <div className="loginTextbox">
                             <p className="heading2 greyText leftText thaiFont">ชื่อผู้ใช้</p>
-                            <input className = "inputBox usernameBox"/>
+                            <input name="username" ref={(c)=>this.username = c} className = "inputBox usernameBox"/>
                             <p className="heading2 greyText leftText thaiFont">รหัสผ่าน</p>
-                            <input className = "inputBox passwordBox"/>
+                            <input name="password" ref={(c)=>this.password = c} className = "inputBox passwordBox"/>
                             <div style={{width : "100%",textAlign : "left",display : "flex"}}>
                                 <input type="checkbox" className="checkBox"/>
                                 <p className="heading2 greyText leftText thaiFont" style={{marginLeft : "10px"}}>จดจำผู้ใช้</p>
@@ -48,4 +53,15 @@ class login extends Component {
         )
     }
 }
-export default withRouter(login)
+
+const mapStateToProps = (state) => {
+    return {
+        user : state.userReducer
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        userLogin : bindActionCreators(userLogin,dispatch)
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(withRouter(login))
