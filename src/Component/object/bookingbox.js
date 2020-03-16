@@ -11,23 +11,28 @@ class bookingbox extends Component {
         console.log(this.props);
     }
     async gotoBook(){
-        await fetch(bookHotel+"?id="+this.props.id+"&name="+localStorage.getItem("name")+"&username="+localStorage.getItem("username")+"&date="+this.date.value+"&room="+this.nor.value+"&tel="+this.tel.value+"&address="+this.address.value+"&dob="+Date.now.toString(),{
-            method : "POST",
-            header : {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-        }).then(res => {
-            return res.json()
-        }).then(res => {
-            if(res.Status === 200){
-                alert(res.Key)
-                this.props.history.push("/booked");
-            }
-            else{
-                alert(res.Key)
-            }
-        })
+        if(this.date.value === "" || this.nor.value === "" || this.tel.value === "" || this.address.value === ""){
+            alert("กรุณากรอกข้อมูลให้ครบถ้วน")
+        }
+        else{
+            await fetch(bookHotel+"?id="+this.props.id+"&name="+localStorage.getItem("name")+"&username="+localStorage.getItem("username")+"&date="+this.date.value+"&room="+this.nor.value+"&tel="+this.tel.value+"&address="+this.address.value+"&dob="+Date.now.toString(),{
+                method : "POST",
+                header : {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                },
+            }).then(res => {
+                return res.json()
+            }).then(res => {
+                if(res.Status === 200){
+                    alert(res.Key)
+                    this.props.history.push("/booked");
+                }
+                else{
+                    alert(res.Key)
+                }
+            })
+        }
     }
     render() {
         return (
