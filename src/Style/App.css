@@ -37,6 +37,9 @@
 .blockendMargin{
   margin-block-end: 10px !important;
 }
+.topMargin{
+  margin-block-start: 50px;
+}
 .flexOn{
   display: flex;
 }

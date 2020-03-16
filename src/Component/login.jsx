@@ -6,18 +6,35 @@ import {withRouter} from "react-router-dom"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import {userLogin} from "../Redux/Action/userAction"
+import {getUser} from "../Constant/api"
 class login extends Component {
     constructor(props){
         super(props);
         this.toHome = this.toHome.bind(this);
     }
     async toHome(){
-        await this.props.userLogin({
-            name : this.username.value,
-            password : this.password.value
+        await fetch(getUser+"?username="+this.username.value+"&password="+this.password.value ,{
+            method : "GET",
+            header : {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+        }).then(res => {
+            return res.json()
+        }).then(res => {
+            if(res.Status === 200){
+                console.log("res : ",res)
+                this.props.userLogin({
+                    name : res.Request.name,
+                    surname : res.Request.surname
+                })
+                console.log(this.props)
+                this.props.history.push("/home");
+            }
+            else{
+                alert(res.Key)
+            }
         })
-        console.log(this.props)
-        // this.props.history.push("/home");
     }
     componentDidMount(){
         document.body.className="loginPage";
@@ -37,14 +54,14 @@ class login extends Component {
                         </div>
                         <div className="loginTextbox">
                             <p className="heading2 greyText leftText thaiFont">ชื่อผู้ใช้</p>
-                            <input name="username" ref={(c)=>this.username = c} className = "inputBox usernameBox"/>
+                            <input type="text" name="username" ref={(c)=>this.username = c} className = "inputBox usernameBox"/>
                             <p className="heading2 greyText leftText thaiFont">รหัสผ่าน</p>
-                            <input name="password" ref={(c)=>this.password = c} className = "inputBox passwordBox"/>
-                            <div style={{width : "100%",textAlign : "left",display : "flex"}}>
+                            <input type="password" name="password" ref={(c)=>this.password = c} className = "inputBox passwordBox"/>
+                            {/* <div style={{width : "100%",textAlign : "left",display : "flex"}}>
                                 <input type="checkbox" className="checkBox"/>
                                 <p className="heading2 greyText leftText thaiFont" style={{marginLeft : "10px"}}>จดจำผู้ใช้</p>
-                            </div>
-                            <button className="Button submitLoginButton thaiFont" onClick={()=>{this.toHome()}}>ลงชื่อเข้าใช้</button>
+                            </div> */}
+                            <button className="Button submitLoginButton thaiFont topMargin" onClick={()=>{this.toHome()}}>ลงชื่อเข้าใช้</button>
                         </div>
                         <div className="linkBox">
                             <a href="/register" className="content greyText leftText thaiFont">ยังไม่มีบัญชี ? ลงทะเบียนที่นี่</a>
