@@ -51,7 +51,7 @@ class detail extends Component {
     render() {
         return (
             <div className="detailContainer">
-                {this.state.booking? <Bookingcard click={()=>{this.openBookingBox()}}/> : ""}
+                {this.state.booking? <Bookingcard click={()=>{this.openBookingBox()}} id={this.state.data.id}/> : ""}
                 <div className="detailHeaderContainer">
                     <div className="detailHeaderLeft">
                         <p className="heading2 login-heading thaiFont-thick bigFont leftMargin blackText">{this.state.data.name}</p>
@@ -84,12 +84,6 @@ class detail extends Component {
                                 return <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- {data}</p>
                                 })
                             }
-                            {/* <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- อาหาร 3 มื้อ</p>
-                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- บริการสระว่ายน้ำ</p>
-                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- ห้องนอน 1 ห้อง 2 เตียง 1 ห้องน้ำ</p>
-                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- เครื่องทำน้ำอุ่น</p>
-                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- บาร์</p>
-                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- ซาวนาร์</p> */}
                         </div>
                     </div>
                     <div className="detailLocation">
