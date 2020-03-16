@@ -26,7 +26,7 @@ class navbar extends Component {
                     <div className="profileText">
                         <p className="heading2 leftText thaiFont leftMargin nomarginblock">Welcome , </p>
         <p className="heading2 leftText thaiFont leftMargin nomarginblock">{localStorage.getItem('name')}</p>
-                        <p className="heading2 leftText thaiFont leftMargin nomarginblock">{this.props.surname}</p>
+                        <p className="heading2 leftText thaiFont leftMargin nomarginblock">{localStorage.getItem('surname')}</p>
                     </div>
                 </div>
                 <div className="navigatorContainer">
