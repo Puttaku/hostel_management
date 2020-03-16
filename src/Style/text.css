@@ -22,7 +22,7 @@
     font-size: 13px;
     overflow: hidden;
     white-space: nowrap;
-    max-width: 175px;
+    max-width: 150px;
     text-overflow: ellipsis;
 }
 .priceText{

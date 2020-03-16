@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../Style/detail.css'
+
 import Bookingcard from "./object/bookingbox"
 export default class detail extends Component {
     constructor(props){
