@@ -13,15 +13,7 @@ class navbar extends Component {
     }
     componentDidMount(){
         console.log("Navbar",this.props)
-        console.log("LocalStorage",localStorage.getItem('user'))
-    }
-    componentDidUpdate(prevState){
-        if(this.state.loaded !== prevState.loaded){
-            console.log("LocalStorage",localStorage.getItem('user'))
-            this.setState({
-                loaded : true
-            })
-        }
+        console.log("LocalStorage",localStorage.getItem('name'))
     }
     clearLocal(){
         localStorage.clear()
@@ -33,7 +25,7 @@ class navbar extends Component {
                     <img src={profile} alt="profile" className="profilePic"/>
                     <div className="profileText">
                         <p className="heading2 leftText thaiFont leftMargin nomarginblock">Welcome , </p>
-        <p className="heading2 leftText thaiFont leftMargin nomarginblock">{this.props.name}</p>
+        <p className="heading2 leftText thaiFont leftMargin nomarginblock">{localStorage.getItem('name')}</p>
                         <p className="heading2 leftText thaiFont leftMargin nomarginblock">{this.props.surname}</p>
                     </div>
                 </div>

@@ -1,6 +1,30 @@
 import React, { Component } from 'react'
 import "../Style/book.css"
+import {getList} from "../Constant/api"
 export default class book extends Component {
+    constructor(){
+        super();
+        this.state = {
+            list : {}
+        }
+    }
+    async componentDidMount(){
+        await fetch(getList,{
+            method : "GET",
+            header : {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+        }).then(res => {
+            return res.json()
+        }).then(res =>{
+            console.log(res)
+            this.setState({
+                list : res.Data
+            })
+            console.log(this.state)
+        })
+    }
     render() {
         return (
             <div className="bookedContainer">
