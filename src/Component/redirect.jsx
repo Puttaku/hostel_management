@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 import {withRouter} from "react-router-dom"
 class redirect extends Component {
     componentDidMount(){
-        this.props.history.push("/login");
+        if(localStorage.getItem("status") !== null){
+            this.props.history.push("/home");
+        }
+        else{
+            this.props.history.push("/login");
+        }
     }
     render() {
         return (

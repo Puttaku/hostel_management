@@ -31,6 +31,7 @@ class login extends Component {
                 localStorage.setItem('name',res.Request.name)
                 localStorage.setItem('status',true)
                 localStorage.setItem('surname',res.Request.surname)
+                localStorage.setItem('email',res.Request.email)
                 console.log(this.props)
                 this.props.history.push("/home");
             }
