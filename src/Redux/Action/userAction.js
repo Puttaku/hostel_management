@@ -1,12 +1,12 @@
-export const userLogin = (data) => dispatch =>{
-    return dispatch ({
+export const userLogin = (data) => {
+    return {
         type : 'LOGIN',
         payload : data
-    })
+    }
 }
-export const userLogout = () => dispatch =>{
-    return dispatch ({
-        type : 'LOGIN',
+export const userLogout = () => {
+    return {
+        type : 'LOGOUT',
         payload : null
-    })
+    }
 }

@@ -1,10 +1,14 @@
-export default (state,action) => {
+const initState = {
+    user : {}
+}
+
+export default (state = initState,action) => {
     switch(action.type){
         case 'LOGIN' : 
-            return state
+            return {user : action.payload || state}
         case "LOGOUT" :
-            return state + action
+            return {user:{}}
         default :
-            return null
+            return state
     }
 }

@@ -11,13 +11,16 @@ class login extends Component {
         super(props);
         this.toHome = this.toHome.bind(this);
     }
-    toHome(){
-        console.log(this.username.value + " : " + this.password.value)
+    async toHome(){
+        await this.props.userLogin({
+            name : this.username.value,
+            password : this.password.value
+        })
+        console.log(this.props)
         // this.props.history.push("/home");
     }
     componentDidMount(){
         document.body.className="loginPage";
-        console.log("Props : ",this.props)
     }
     render() {
         return (
