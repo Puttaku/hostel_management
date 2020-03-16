@@ -4,8 +4,27 @@ import '../Style/text.css'
 import profile from "../Assets/Icon/user.png"
 import {connect} from "react-redux"
 class navbar extends Component {
+    constructor(){
+        super()
+        this.clearLocal = this.clearLocal.bind(this)
+        this.state = {
+            loaded : false
+        }
+    }
     componentDidMount(){
         console.log("Navbar",this.props)
+        console.log("LocalStorage",localStorage.getItem('user'))
+    }
+    componentDidUpdate(prevState){
+        if(this.state.loaded !== prevState.loaded){
+            console.log("LocalStorage",localStorage.getItem('user'))
+            this.setState({
+                loaded : true
+            })
+        }
+    }
+    clearLocal(){
+        localStorage.clear()
     }
     render() {
         return (
@@ -21,7 +40,7 @@ class navbar extends Component {
                 <div className="navigatorContainer">
                         <a href="/home" className="heading2 leftText thaiFont font28 leftMargin navmenuText">หน้าหลัก</a>
                         <a href="/booked" className="heading2 leftText thaiFont font28 leftMargin navmenuText">โรงแรมที่จอง</a>
-                        <a href="/login" className="heading2 leftText thaiFont font28 leftMargin navmenuText">ออกจากระบบ</a>
+                        <a onClick={()=>{this.clearLocal()}} href="/login" className="heading2 leftText thaiFont font28 leftMargin navmenuText">ออกจากระบบ</a>
                 </div>
             </div>
         )
