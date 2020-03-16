@@ -1,19 +1,51 @@
 import React, { Component } from 'react'
 import '../Style/detail.css'
-
+import {withRouter} from "react-router-dom"
+import {getHotel} from "../Constant/api"
 import Bookingcard from "./object/bookingbox"
-export default class detail extends Component {
+class detail extends Component {
     constructor(props){
         super(props);
         this.state = {
-            booking : false
+            booking : false,
+            data : {},
+            picture : [],
+            thumbnail : 0,
+            detail : []
         }
         this.openBookingBox = this.openBookingBox.bind(this);
+        this.changeThumb = this.changeThumb.bind(this);
     }
     openBookingBox(){
         console.log(this.state.booking)
         this.setState ({
             booking : this.state.booking === true ? false : true
+        })
+    }
+    changeThumb(num){
+        this.setState({
+            thumbnail : num
+        })
+    }
+    async componentDidMount(){
+        var search = this.props.location.search;
+        var id = search.slice(4);
+        await fetch(getHotel+"?id="+id,{
+            method : "GET",
+            header : {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+        }).then(res => {
+            return res.json()
+        }).then(res =>{
+            console.log(res)
+            this.setState({
+                data : res.Data,
+                picture : res.Data.pic,
+                detail : res.Data.Detail
+            })
+            console.log(this.state);
         })
     }
     render() {
@@ -22,21 +54,21 @@ export default class detail extends Component {
                 {this.state.booking? <Bookingcard click={()=>{this.openBookingBox()}}/> : ""}
                 <div className="detailHeaderContainer">
                     <div className="detailHeaderLeft">
-                        <p className="heading2 login-heading thaiFont-thick bigFont leftMargin blackText">Hotel A</p>
-                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText">Bangkok , Thailand</p>
+                        <p className="heading2 login-heading thaiFont-thick bigFont leftMargin blackText">{this.state.data.name}</p>
+                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText">{this.state.data.locate}</p>
                     </div>
                     <div className="detailHeaderRight">
-                        <p className="heading2 login-heading thaiFont-thick bigFont leftMargin greenText">ว่าง</p>
-                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText">อาหาร 3 มื้อ/สระว่ายน้ำ/2 เตียง</p>
+                        <p className="heading2 login-heading thaiFont-thick bigFont leftMargin greenText"style={{color : this.state.data.isAvailiable === true ? "" : "red"}}>{this.state.data.isAvailiable === true ? "ว่าง" : "ไม่ว่าง"}</p>
+                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText">{this.state.data.Detailsummary}</p>
                     </div>
                 </div>
                 <div className="detailPicContainer">
-                    <div className="Bigpicture"/>
+                    <div className="Bigpicture" style = {{backgroundImage : "url(" + this.state.picture[this.state.thumbnail] + ")"}}/>
                     <div className="SmallpictureContainer">
-                        <div className="Smallpicture"/>
-                        <div className="Smallpicture"/>
-                        <div className="Smallpicture"/>
-                        <div className="Smallpicture"/>
+                        <div className="Smallpicture" onClick={()=>{this.changeThumb(0)}} style = {{backgroundImage : "url(" + this.state.picture[0] + ")"}}/>
+                        <div className="Smallpicture" onClick={()=>{this.changeThumb(1)}} style = {{backgroundImage : "url(" + this.state.picture[1] + ")"}}/>
+                        <div className="Smallpicture" onClick={()=>{this.changeThumb(2)}} style = {{backgroundImage : "url(" + this.state.picture[2] + ")"}}/>
+                        <div className="Smallpicture" onClick={()=>{this.changeThumb(3)}} style = {{backgroundImage : "url(" + this.state.picture[3] + ")"}}/>
                     </div>
                 </div>
                 <div className="detailPriceContainer">
@@ -47,20 +79,26 @@ export default class detail extends Component {
                     <div>
                         <p className="heading3 login-heading thaiFont-thick leftMargin blackText priceText">รายละเอียด</p>
                         <div className="detailList">
-                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- อาหาร 3 มื้อ</p>
+                            {
+                                this.state.detail.map((data)=>{
+                                return <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- {data}</p>
+                                })
+                            }
+                            {/* <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- อาหาร 3 มื้อ</p>
                             <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- บริการสระว่ายน้ำ</p>
                             <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- ห้องนอน 1 ห้อง 2 เตียง 1 ห้องน้ำ</p>
                             <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- เครื่องทำน้ำอุ่น</p>
                             <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- บาร์</p>
-                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- ซาวนาร์</p>
+                            <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">- ซาวนาร์</p> */}
                         </div>
                     </div>
                     <div className="detailLocation">
                         <p className="heading3 login-heading thaiFont-thick leftMargin blackText priceText blockendMargin">ที่ตั้ง</p>
-                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">หมู่ที่ 5 บ้านตาลสุม. ตำบล : ตาลสุม. อำเภอ : ตาลสุม. จังหวัด : อุบลราชธานี. รหัสไปรษณีย์ : 34330.</p>
+                        <p className="heading2 login-heading thaiFont-thick leftMargin greyText priceText">{this.state.data.location}</p>
                     </div>
                 </div>
             </div>
         )
     }
 }
+export default withRouter(detail)
