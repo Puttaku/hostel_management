@@ -13,32 +13,37 @@ class login extends Component {
         this.toHome = this.toHome.bind(this);
     }
     async toHome(){
-        await fetch(getUser+"?username="+this.username.value+"&password="+this.password.value ,{
-            method : "GET",
-            header : {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-        }).then(res => {
-            return res.json()
-        }).then(res => {
-            if(res.Status === 200){
-                console.log("res : ",res)
-                this.props.userLogin({
-                    name : res.Request.name,
-                    surname : res.Request.surname
-                })
-                localStorage.setItem('name',res.Request.name)
-                localStorage.setItem('status',true)
-                localStorage.setItem('surname',res.Request.surname)
-                localStorage.setItem('email',res.Request.email)
-                console.log(this.props)
-                this.props.history.push("/home");
-            }
-            else{
-                alert(res.Key)
-            }
-        })
+        if(this.username.value === "" || this.password.value === ""){
+            alert("กรุณากรอกข้อมูลให้ครบถ้วน")
+        }
+        else{
+            await fetch(getUser+"?username="+this.username.value+"&password="+this.password.value ,{
+                method : "GET",
+                header : {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                },
+            }).then(res => {
+                return res.json()
+            }).then(res => {
+                if(res.Status === 200){
+                    console.log("res : ",res)
+                    this.props.userLogin({
+                        name : res.Request.name,
+                        surname : res.Request.surname
+                    })
+                    localStorage.setItem('name',res.Request.name)
+                    localStorage.setItem('status',true)
+                    localStorage.setItem('surname',res.Request.surname)
+                    localStorage.setItem('email',res.Request.email)
+                    console.log(this.props)
+                    this.props.history.push("/home");
+                }
+                else{
+                    alert(res.Key)
+                }
+            })
+        }
     }
     componentDidMount(){
         document.body.className="loginPage";
