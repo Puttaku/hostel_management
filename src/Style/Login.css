@@ -34,4 +34,7 @@
 }
 .headingContainer{
     text-align: center;
+    position: fixed;
+    top: calc(50% - 290px);
+    left: calc(50% - 100px);
 }

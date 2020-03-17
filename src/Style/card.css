@@ -7,8 +7,8 @@
     position: fixed;
     width: 250px;
     height: 350px;
-    top: calc(50% - 150px);
-    left: calc(50% - 125px);
+    top: calc(50% - 120px);
+    left: calc(50% - 134px);
 }
 .hotel-list-card{
     width: 260px;
