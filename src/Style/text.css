@@ -3,107 +3,140 @@
     color: white;
     font-size: 72px;
 }
+
 .heading2 {
     font-family: "heading-font";
     color: white;
     font-size: 18px;
 }
+
 .heading3 {
     font-family: "heading-font-thick";
     color: #0085FF;
     font-size: 24px;
 }
-.content{
+
+.content {
     font-family: "heading-font";
     color: white;
     font-size: 13px;
 }
-.listFont{
+
+.listFont {
     font-size: 13px;
     overflow: hidden;
     white-space: nowrap;
     max-width: 150px;
     text-overflow: ellipsis;
 }
-.priceText{
+
+.priceText {
+    -webkit-margin-before: 0 !important;
     margin-block-start: 0 !important;
 }
-.bigFont{
+
+.bigFont {
     font-size: 36px;
 }
-.font28{
+
+.font28 {
     font-size: 28px;
 }
-.nomargin{
+
+.nomargin {
     margin: 0;
 }
-.rightAlign{
+
+.rightAlign {
     text-align: right !important;
 }
-.nomarginblock{
+
+.nomarginblock {
+    -webkit-margin-before: 0 !important;
     margin-block-start: 0 !important;
+    -webkit-margin-after: 0 !important;
     margin-block-end: 0 !important;
 }
-.marginRight{
+
+.marginRight {
     margin-right: 10px;
 }
-.blackText{
+
+.blackText {
     color: black;
 }
-.greyText{
+
+.greyText {
     color: #888888;
 }
-.greyText2{
+
+.greyText2 {
     color: #bbbbbb;
 }
-.blueText{
-    color:#0085FF;
+
+.blueText {
+    color: #0085FF;
 }
-.greenText{
+
+.greenText {
     color: lime;
 }
-.redText{
+
+.redText {
     color: red;
 }
-.leftText{
+
+.leftText {
     text-align: left;
+    -webkit-margin-before: 0.5em;
     margin-block-start: 0.5em;
+    -webkit-margin-after: 0.5em;
     margin-block-end: 0.5em;
 }
-.font-thick{
+
+.font-thick {
     font-family: "heading-font-thick";
 }
-.font-regular{
+
+.font-regular {
     font-family: 'heading-font-Regular';
 }
-.thaiFont{
+
+.thaiFont {
     font-family: "thaiFont";
 }
-.thaiFont-thick{
+
+.thaiFont-thick {
     font-family: "thaiFont-thick";
 }
+
 @font-face {
     font-family: 'heading-font';
     src: url("../fonts/Roboto/Roboto-Light.ttf");
 }
+
 @font-face {
     font-family: 'heading-font-thick';
     src: url("../fonts/Roboto/Roboto-Black.ttf");
 }
+
 @font-face {
     font-family: 'heading-font-Regular';
     src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
+
 @font-face {
     font-family: 'thaiFont';
     src: url("../fonts/Kanit/Kanit-Light.ttf");
 }
+
 @font-face {
     font-family: 'thaiFont-thick';
     src: url("../fonts/Kanit/Kanit-Regular.ttf");
 }
-@media only screen and (min-width : 1367px){
-    .listFont{
+
+@media only screen and (min-width : 1367px) {
+    .listFont {
         font-size: 16px;
         max-width: 260px;
     }

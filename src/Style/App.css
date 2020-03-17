@@ -1,48 +1,66 @@
 .App {
   /* text-align: center; */
 }
-.inputBox{
+
+.inputBox {
   width: calc(100% - 5px);
   height: 24px;
   border-radius: 5px;
   border-color: cyan;
 }
-.Button{
+
+.Button {
   width: 100%;
   height: 36px;
   border-radius: 5px;
   border: none;
 }
-.checkBox{
+
+.checkBox {
   width: 24px;
   height: 24px;
+  -webkit-margin-before: 10px;
   margin-block-start: 10px;
+  -webkit-margin-after: 10px;
   margin-block-end: 10px;
   text-align: left;
   background-color: #DDDDDD;
 }
-.fullWidth{
+
+.fullWidth {
   width: 100%;
 }
-.topdownMargin{
+
+.topdownMargin {
+  -webkit-margin-before: 10px;
   margin-block-start: 10px;
+  -webkit-margin-after: 15px;
   margin-block-end: 15px;
 }
-.leftMargin{
+
+.leftMargin {
   margin-left: 10px;
 }
-.bottomMargin{
+
+.bottomMargin {
   margin-bottom: 10px;
 }
-.blockendMargin{
+
+.blockendMargin {
+  -webkit-margin-after: 10px !important;
   margin-block-end: 10px !important;
 }
-.topMargin{
+
+.topMargin {
+  -webkit-margin-before: 50px;
   margin-block-start: 50px;
 }
-.flexOn{
+
+.flexOn {
+  display: -webkit-box;
   display: flex;
 }
-.noPadding{
+
+.noPadding {
   padding: 0 !important;
 }

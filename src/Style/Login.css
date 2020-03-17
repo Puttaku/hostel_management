@@ -4,35 +4,49 @@
     background: url("../Assets/Photo/home_bg.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
-    -moz-background-size:cover;
-    -moz-background-size:cover;
+    -moz-background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: multiply;
 }
-.loginBoxheader{
+
+.loginBoxheader {
     text-align: center;
 }
-.login-heading{
+
+.login-heading {
+    -webkit-margin-before: 0.5em;
     margin-block-start: 0.5em;
+    -webkit-margin-after: 0;
     margin-block-end: 0;
 }
-.login-sub-heading{
+
+.login-sub-heading {
+    -webkit-margin-before: 0.3em;
     margin-block-start: 0.3em;
+    -webkit-margin-after: 0;
     margin-block-end: 0;
 }
-.submitLoginButton{
+
+.submitLoginButton {
     color: white;
     background-color: #0085FF;
     cursor: pointer;
 }
-.linkBox{
+
+.linkBox {
     margin-top: 10px;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
 }
-.headingContainer{
+
+.headingContainer {
     text-align: center;
     position: fixed;
     top: calc(50% - 290px);

@@ -1,7 +1,9 @@
-.homeContainer{
+.homeContainer {
     padding-left: 200px;
 }
-.hotelListContainer{
+
+.hotelListContainer {
+    display: -webkit-box;
     display: flex;
     width: 100%;
     overflow-x: auto;
@@ -9,34 +11,44 @@
     margin-left: 15px;
     margin-top: 50px;
 }
-.hotelThumbnail{
+
+.hotelThumbnail {
     width: 100%;
     height: 110px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-size: cover;
 }
-.hotelDetail{
-    display:flex;
+
+.hotelDetail {
+    display: -webkit-box;
+    display: flex;
     width: 92%;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     margin-top: 10px;
     margin-left: 7px;
 }
-.detailLeft{
-    float:left;
+
+.detailLeft {
+    float: left;
 }
-.detailRight{
+
+.detailRight {
     text-align: right !important;
-    float:right;
+    float: right;
 }
-@media only screen and (min-width : 1367px){
-    .hotelThumbnail{
+
+@media only screen and (min-width : 1367px) {
+    .hotelThumbnail {
         height: 150px;
     }
-    .hotelDetail{
-        display:flex;
+
+    .hotelDetail {
+        display: -webkit-box;
+        display: flex;
         width: 92%;
+        -webkit-box-pack: justify;
         justify-content: space-between;
         margin-top: 15px;
         margin-left: 15px;

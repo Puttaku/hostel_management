@@ -1,4 +1,4 @@
-.bgbl08{
+.bgbl08 {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -8,16 +8,21 @@
     top: 0;
     left: 0;
 }
-.bookingForm{
+
+.bookingForm {
     width: 100%;
 }
-.bookConfirm{
+
+.bookConfirm {
     width: 100%;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: end;
     justify-content: flex-end;
     margin-top: 20px;
 }
-.closeBookingBox{
+
+.closeBookingBox {
     position: absolute;
     margin-left: 390px;
     cursor: pointer;
