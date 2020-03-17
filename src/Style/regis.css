@@ -1,33 +1,45 @@
-.regisContainer{
+.regisContainer {
+    display: -webkit-box;
     display: flex;
 }
-.leftThumbnailRegis{
+
+.leftThumbnailRegis {
     visibility: hidden;
 }
-.rightFormRegis{
+
+.rightFormRegis {
     position: absolute;
     width: 95%;
     left: 10px;
 }
-.regisHeading{
+
+.regisHeading {
+    -webkit-margin-after: 50px;
     margin-block-end: 50px;
 }
-.nameBox{
+
+.nameBox {
+    display: -webkit-box;
     display: flex;
 }
-.passwordBoxRegis{
+
+.passwordBoxRegis {
     margin-left: 20px;
 }
-.usernameBoxRegis , .passwordBoxRegis{
+
+.usernameBoxRegis,
+.passwordBoxRegis {
     width: 50%;
 }
-.submitRegisButton{
+
+.submitRegisButton {
     width: 40%;
     background-color: #0085FF;
     color: white;
 }
-@media only screen and (min-width : 530px){
-    .leftThumbnailRegis{
+
+@media only screen and (min-width : 530px) {
+    .leftThumbnailRegis {
         visibility: visible;
         position: fixed;
         width: 35%;
@@ -38,7 +50,8 @@
         background: url("../Assets/Photo/regis_bg.jpg");
         background-size: cover;
     }
-    .rightFormRegis{
+
+    .rightFormRegis {
         left: calc(35% + 10px);
         width: 60%;
     }

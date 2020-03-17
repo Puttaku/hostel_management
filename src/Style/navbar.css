@@ -1,22 +1,27 @@
-.navbarContainer{
+.navbarContainer {
     position: fixed;
     height: 100vh;
     width: 200px;
     background-color: #0085FF;
 }
-.profilePic{
+
+.profilePic {
     max-height: 80px;
     max-width: 80px;
 }
-.profileContainer{
+
+.profileContainer {
     margin: 10px;
     margin-top: 30px;
+    display: -webkit-box;
     display: flex;
 }
-.navigatorContainer{
+
+.navigatorContainer {
     margin-top: 30px;
 }
-.navmenuText{
+
+.navmenuText {
     text-decoration: none;
     margin-top: 10px;
     margin-bottom: 10px;
