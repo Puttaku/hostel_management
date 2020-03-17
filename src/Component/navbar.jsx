@@ -3,7 +3,7 @@ import '../Style/navbar.css'
 import '../Style/text.css'
 import profile from "../Assets/Icon/user.png"
 import {connect} from "react-redux"
-import {withRouter} from "react-router-dom"
+import {withRouter,Link} from "react-router-dom"
 class navbar extends Component {
     constructor(){
         super()
@@ -32,9 +32,9 @@ class navbar extends Component {
                     </div>
                 </div>
                 <div className="navigatorContainer">
-                        <a href="/home" className="heading2 leftText thaiFont font28 leftMargin navmenuText">หน้าหลัก</a>
-                        <a href="/booked" className="heading2 leftText thaiFont font28 leftMargin navmenuText">โรงแรมที่จอง</a>
-                        <a onClick={()=>{this.clearLocal()}} href="/login" className="heading2 leftText thaiFont font28 leftMargin navmenuText">ออกจากระบบ</a>
+                        <Link to="/home" className="heading2 leftText thaiFont font28 leftMargin navmenuText">หน้าหลัก</Link>
+                        <Link to="/booked" className="heading2 leftText thaiFont font28 leftMargin navmenuText">โรงแรมที่จอง</Link>
+                        <Link onClick={()=>{this.clearLocal()}} to="/login" className="heading2 leftText thaiFont font28 leftMargin navmenuText">ออกจากระบบ</Link>
                 </div>
             </div>
             : ""

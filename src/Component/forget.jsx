@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../Style/forget.css'
 import '../Style/text.css'
 import {forgetemail} from "../Constant/api"
+import {Link} from "react-router-dom"
 export default class forget extends Component {
     constructor(){
         super()
@@ -53,7 +54,7 @@ export default class forget extends Component {
                     <button onClick={()=>{this.sendEmail()}} className="Button forgetButton thaiFont">ตกลง</button>
                     {this.state.email ? <p className="heading2 leftText thaiFont marginRight">link เปลี่ยนรหัสผ่านได้ส่งไปที่อีเมลล์ของคุณแล้ว โปรดทำการตรวจสอบ</p> : ""}
                 </div>
-                <a href="/login" className="content blueText leftText thaiFont">กลับสู่หน้าลงชื่อเข้าใช้</a>
+                <Link to="/login" className="content blueText leftText thaiFont">กลับสู่หน้าลงชื่อเข้าใช้</Link>
             </div>
         )
     }

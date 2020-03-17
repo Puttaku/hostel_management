@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../Style/regis.css'
 import '../Style/text.css'
 import {regisUser} from "../Constant/api"
+import {Link} from "react-router-dom"
 export default class regis extends Component {
     constructor(){
         super()
@@ -14,6 +15,9 @@ export default class regis extends Component {
         this.setState({
             accept : !this.state.accept
         })
+    }
+    componentDidMount(){
+        document.body.className="regisPage";
     }
     async register(){
         if(this.username.value === "" || this.name.value === "" || this.surname.value === "" || this.email.value === "" || this.password.value === "" || this.passcon.value === ""){
@@ -90,7 +94,7 @@ export default class regis extends Component {
                         <button onClick={()=>{this.register()}} className="Button submitRegisButton thaiFont">ลงทะเบียน</button>
                     </div>
                     <div style={{marginBottom : "20px"}}>
-                        <a href="/login" className="content blueText leftText thaiFont">กลับสู่หน้าลงชื่อเข้าใช้</a>
+                        <Link to="/login" className="content blueText leftText thaiFont">กลับสู่หน้าลงชื่อเข้าใช้</Link>
                     </div>
                     </div>
                 </div>

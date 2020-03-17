@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../Style/Login.css'
 import '../Style/card.css'
 import '../Style/text.css'
-import {withRouter} from "react-router-dom"
+import {withRouter,Link} from "react-router-dom"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import {userLogin} from "../Redux/Action/userAction"
@@ -73,8 +73,8 @@ class login extends Component {
                             <button className="Button submitLoginButton thaiFont topMargin" onClick={()=>{this.toHome()}}>ลงชื่อเข้าใช้</button>
                         </div>
                         <div className="linkBox">
-                            <a href="/register" className="content greyText leftText thaiFont">ยังไม่มีบัญชี ? ลงทะเบียนที่นี่</a>
-                            <a href="/forget" className="content greyText leftText thaiFont">ลืมรหัสผ่าน?</a>
+                            <Link to="/register" className="content greyText leftText thaiFont">ยังไม่มีบัญชี ? ลงทะเบียนที่นี่</Link>
+                            <Link to="/forget" className="content greyText leftText thaiFont">ลืมรหัสผ่าน?</Link>
                         </div>
                     </div>
                 </div>

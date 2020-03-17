@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../Style/forget.css'
 import '../Style/text.css'
 import {reset} from "../Constant/api"
-import {withRouter} from "react-router-dom"
+import {withRouter,Link} from "react-router-dom"
  class restore extends Component {
     constructor(){
         super()
@@ -60,7 +60,7 @@ import {withRouter} from "react-router-dom"
                     <input name="passcon" ref={(e)=>this.passcon = e} style={{width : "60%"}} className="forgetEmail inputBox"/>
                     <button onClick={()=>{this.sendEmail()}} className="Button forgetButton thaiFont">ตกลง</button>
                 </div>
-                <a href="/login" className="content blueText leftText thaiFont">กลับสู่หน้าลงชื่อเข้าใช้</a>
+                <Link to="/login" className="content blueText leftText thaiFont">กลับสู่หน้าลงชื่อเข้าใช้</Link>
             </div>
         )
     }

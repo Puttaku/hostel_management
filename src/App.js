@@ -11,14 +11,14 @@ import Navbar from "./Component/navbar"
 import book from "./Component/book"
 import detail from "./Component/detail"
 import restore from"./Component/restore"
-import {BrowserRouter} from "react-router-dom"
+import {HashRouter} from "react-router-dom"
 class App extends Component {
   componentDidMount(){
     console.log(this.props)
   }
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
       <div className="App flexOn">
         <Navbar/>
           <Switch>
@@ -32,7 +32,7 @@ class App extends Component {
             <Route path="/reset" component={restore}/>
           </Switch>
       </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
