@@ -13,9 +13,6 @@ import detail from "./Component/detail"
 import restore from"./Component/restore"
 import {HashRouter} from "react-router-dom"
 class App extends Component {
-  componentDidMount(){
-    console.log(this.props)
-  }
   render() {
     return (
       <HashRouter>

@@ -23,11 +23,9 @@ export default class book extends Component {
         }).then(res => {
             return res.json()
         }).then(res =>{
-            console.log(res)
             this.setState({
                 list : res.Data
             })
-            console.log(this.state)
         })
     }
     async deleteBook(id){
@@ -38,7 +36,6 @@ export default class book extends Component {
                 "Content-Type": "application/json"
             },
         }).then(() =>{
-            console.log("deleted")
             this.addBook()
         })
     }

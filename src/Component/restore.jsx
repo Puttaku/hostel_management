@@ -17,7 +17,6 @@ import {withRouter,Link} from "react-router-dom"
     async sendEmail(){
         var input = this.props.location.search;
         var token = input.slice(7);
-            console.log(token)
         if(this.password.value === "" || this.passcon.value === "" || token === ""){
             alert("กรุณากรอกข้อมูลให้ครบถ้วน")
         }
@@ -34,7 +33,6 @@ import {withRouter,Link} from "react-router-dom"
             }).then(res => {
                 return res.json()
             }).then(res => {
-                console.log(res)
                 if(res.Status === 200){
                     alert("เปลี่ยนรหัสผ่านเสร็จสิ้น กลับสู่หน้า Login")
                     this.props.history.push("/login")

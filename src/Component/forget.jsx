@@ -28,7 +28,6 @@ export default class forget extends Component {
             }).then(res => {
                 return res.json()
             }).then(res => {
-                console.log(res)
                 if(res.Status === 200){
                     this.setState({
                         email : true

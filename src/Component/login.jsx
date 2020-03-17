@@ -27,7 +27,6 @@ class login extends Component {
                 return res.json()
             }).then(res => {
                 if(res.Status === 200){
-                    console.log("res : ",res)
                     this.props.userLogin({
                         name : res.Request.name,
                         surname : res.Request.surname
@@ -36,7 +35,6 @@ class login extends Component {
                     localStorage.setItem('status',true)
                     localStorage.setItem('surname',res.Request.surname)
                     localStorage.setItem('email',res.Request.email)
-                    console.log(this.props)
                     this.props.history.push("/home");
                 }
                 else{

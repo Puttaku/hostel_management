@@ -7,9 +7,6 @@ class bookingbox extends Component {
         super(props);
         this.gotoBook = this.gotoBook.bind(this);
     }
-    componentDidMount(){
-        console.log(this.props);
-    }
     async gotoBook(){
         if(this.date.value === "" || this.nor.value === "" || this.tel.value === "" || this.address.value === ""){
             alert("กรุณากรอกข้อมูลให้ครบถ้วน")

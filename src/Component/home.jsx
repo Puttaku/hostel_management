@@ -24,11 +24,9 @@ class home extends Component {
         }).then(res => {
             return res.json()
         }).then(res =>{
-            console.log(res)
             this.setState({
                 hotels : res.Data.List
             })
-            console.log(this.state.hotels);
         })
     }
     clickChoose(id){
@@ -38,7 +36,6 @@ class home extends Component {
         this.setState({
             onlyAvail : !this.state.onlyAvail
         })
-        console.log(this.state.onlyAvail);
     }
     render() {
         return (

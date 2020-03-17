@@ -12,10 +12,6 @@ class navbar extends Component {
             loaded : false
         }
     }
-    componentDidMount(){
-        console.log("Navbar",this.props)
-        console.log("LocalStorage",localStorage.getItem('name'))
-    }
     clearLocal(){
         localStorage.clear()
     }

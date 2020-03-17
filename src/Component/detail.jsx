@@ -17,7 +17,6 @@ class detail extends Component {
         this.changeThumb = this.changeThumb.bind(this);
     }
     openBookingBox(){
-        console.log(this.state.booking)
         this.setState ({
             booking : this.state.booking === true ? false : true
         })
@@ -39,13 +38,11 @@ class detail extends Component {
         }).then(res => {
             return res.json()
         }).then(res =>{
-            console.log(res)
             this.setState({
                 data : res.Data,
                 picture : res.Data.pic,
                 detail : res.Data.Detail
             })
-            console.log(this.state);
         })
     }
     render() {
