@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Style/App.css';
 import './Style/navbar.css'
-import {Route} from "react-router-dom"
+import {Route, Switch} from "react-router-dom"
 import login from "./Component/login"
 import forget from "./Component/forget"
 import redirect from "./Component/redirect"
@@ -21,14 +21,16 @@ class App extends Component {
       <BrowserRouter>
       <div className="App flexOn">
         <Navbar/>
-          <Route exact path="/" component={redirect}/>
-          <Route exact path="/login" component={login}/>
-          <Route exact path="/forget" component={forget}/>
-          <Route exact path="/register" component={regis}/>
-          <Route exact path="/home" component={home}/>
-          <Route exact path="/booked" component={book}/>
-          <Route path="/detail" component={detail}/>
-          <Route path="/reset" component={restore}/>
+          <Switch>
+            <Route exact path="/" component={redirect}/>
+            <Route exact path="/login" component={login}/>
+            <Route exact path="/forget" component={forget}/>
+            <Route exact path="/register" component={regis}/>
+            <Route exact path="/home" component={home}/>
+            <Route exact path="/booked" component={book}/>
+            <Route path="/detail" component={detail}/>
+            <Route path="/reset" component={restore}/>
+          </Switch>
       </div>
       </BrowserRouter>
     )
