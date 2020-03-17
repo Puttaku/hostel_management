@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './Style/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter} from "react-router-dom"
+// import {BrowserRouter} from "react-router-dom"
 import {Provider} from "react-redux"
 import { createStore } from 'redux'
 import rootReducer from './Redux/Reducer'
@@ -11,9 +11,9 @@ import rootReducer from './Redux/Reducer'
 const store = createStore(rootReducer)
 const RoutePath = () =>(
     <Provider store={store}>
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
             <App/>
-        </BrowserRouter>
+        {/* </BrowserRouter> */}
     </Provider>
 )
 
