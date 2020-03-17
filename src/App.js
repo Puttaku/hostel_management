@@ -10,12 +10,16 @@ import home from "./Component/home"
 import Navbar from "./Component/navbar"
 import book from "./Component/book"
 import detail from "./Component/detail"
+import restore from"./Component/restore"
 import {withRouter} from "react-router-dom"
 class App extends Component {
+  componentDidMount(){
+    console.log(this.props)
+  }
   render() {
     return (
       <div className="App flexOn">
-        {this.props.location.pathname !== "/login" && this.props.location.pathname !== "/forget" && this.props.history.pathname !== "/register" ? <Navbar/> : ""}
+        {this.props.location.pathname !== "/login" && this.props.location.pathname !== "/forget" && this.props.history.pathname !== "/register" && this.props.location.pathname !== "/reset" ? <Navbar/> : ""}
         <Route exact path="/" component={redirect}/>
         <Route exact path="/login" component={login}/>
         <Route exact path="/forget" component={forget}/>
@@ -23,6 +27,7 @@ class App extends Component {
         <Route exact path="/home" component={home}/>
         <Route exact path="/booked" component={book}/>
         <Route path="/detail" component={detail}/>
+        <Route path="/reset" component={restore}/>
       </div>
     )
   }
